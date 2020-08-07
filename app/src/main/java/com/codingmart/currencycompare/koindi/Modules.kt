@@ -1,6 +1,7 @@
 package com.codingmart.currencycompare.koindi
 
 import com.codingmart.currencycompare.home.MainActivityViewModel
+import com.codingmart.currencycompare.home.SelectBaseViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -10,4 +11,6 @@ val myModule =
         viewModel {
             MainActivityViewModel(apiService = get(), databaseService = get())
         }
+
+        viewModel { SelectBaseViewModel(apiService = get(), databaseService = get()) }
     }
