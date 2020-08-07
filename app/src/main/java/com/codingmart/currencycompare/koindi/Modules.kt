@@ -8,6 +8,6 @@ val myModule =
     module(override = true) {
 
         viewModel {
-            MainActivityViewModel(service = get())
+            MainActivityViewModel(apiService = get(), databaseService = get())
         }
     }

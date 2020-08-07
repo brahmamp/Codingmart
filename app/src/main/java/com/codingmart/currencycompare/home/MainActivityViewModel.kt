@@ -3,12 +3,16 @@ package com.codingmart.currencycompare.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.codingmart.currencycompare.database.dao.ExchangeRateDao
 import com.codingmart.currencycompare.helper.processRequest
-import com.codingmart.currencycompare.network.ApiService
 import com.codingmart.currencycompare.models.ExchangeApiRateResponse
+import com.codingmart.currencycompare.network.ApiService
 import io.reactivex.disposables.CompositeDisposable
 
-class MainActivityViewModel(private val service: ApiService) : ViewModel() {
+class MainActivityViewModel(
+    private val apiService: ApiService,
+    private val databaseService: ExchangeRateDao
+) : ViewModel() {
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
@@ -23,7 +27,7 @@ class MainActivityViewModel(private val service: ApiService) : ViewModel() {
 
 
     fun getExchangeApiRate(base: String, symbols: String) {
-        compositeDisposable.add(service.getExchangeRateApi().processRequest(
+        compositeDisposable.add(apiService.getExchangeRateApi().processRequest(
             {
                 _exchangeApiResponse.value = it
             },
