@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Currency Compare</string>
+    <string name="logged_out_successfully">Logged out successfully !</string>
+    <string name="already_logged_out">You already logged out !</string>
     <string name="select_your_base">Select your base</string>
     <string name="currency_code_inr_usd_eur">Currency code (INR, USD, EUR)</string>
     <string name="next">NEXT</string>

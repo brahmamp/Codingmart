@@ -17,9 +17,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.login_screen)
 
         login_button.setOnClickListener {
-            if (isConnectedToInternet(this)) {
+            /*if (isConnectedToInternet(this)) {
                 viewModel.getExchangeApiRate("", "")
-            }
+            }*/
         }
 
         initLiveDataObservables()
