@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.codingmart.currencycompare.R
 import com.codingmart.currencycompare.helper.NetworkHelper.isConnectedToInternet
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.login_screen.*
 import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
@@ -14,9 +14,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.login_screen)
 
-        exchange_rate_api.setOnClickListener {
+        login_button.setOnClickListener {
             if (isConnectedToInternet(this)) {
                 viewModel.getExchangeApiRate("", "")
             }
