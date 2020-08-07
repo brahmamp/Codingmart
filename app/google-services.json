@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "830961951119",
+    "firebase_url": "https://currency-compare-6afc8.firebaseio.com",
+    "project_id": "currency-compare-6afc8",
+    "storage_bucket": "currency-compare-6afc8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830961951119:android:e38b3673ad07981b1a2bfa",
+        "android_client_info": {
+          "package_name": "com.codingmart.currencycompare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "830961951119-proo6k7hbsdmbtvoqt1ieqt6qju26tla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU4Q8aANtSsR0BeN9a2IDFzbhMcVvBH0Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "830961951119-proo6k7hbsdmbtvoqt1ieqt6qju26tla.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
