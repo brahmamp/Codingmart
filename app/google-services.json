@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "830961951119-cek8uj7s8g29go9cf3iefagfjnqo1g4v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codingmart.currencycompare",
+            "certificate_hash": "5a850c23923178ff1a68a6f3e20b797a738a6c4b"
+          }
+        },
+        {
+          "client_id": "830961951119-qsk36m6blhbmpjfcu840vj0qsn2drcbq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codingmart.currencycompare",
+            "certificate_hash": "0e7d03ea1d3c376ec9a7860e6317a97b61a1673c"
+          }
+        },
+        {
           "client_id": "830961951119-proo6k7hbsdmbtvoqt1ieqt6qju26tla.apps.googleusercontent.com",
           "client_type": 3
         }

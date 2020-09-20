@@ -36,7 +36,7 @@
         android:layout_marginTop="50dp"
         android:text="Base Currency: -"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headText" />
@@ -49,18 +49,18 @@
         android:layout_marginTop="50dp"
         android:text="Currencies to compare "
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/baseCurrency" />
 
 
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/edtCurrencyCode"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:background="@color/colorAccent"
+        android:background="@color/white"
         android:hint="@string/currency_code_inr_usd_eur"
         android:padding="10dp"
         app:layout_constraintEnd_toStartOf="@+id/addBtn"
@@ -85,9 +85,13 @@
         android:background="@color/colorPrimary"
         android:text="@string/next"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtCurrencyCode" />
+
+    <include
+        layout="@layout/loading_indicator"
+        android:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,11 +2,11 @@ package com.codingmart.currencycompare.login
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.codingmart.currencycompare.R
 import com.codingmart.currencycompare.helper.showSnackbar
+import com.codingmart.currencycompare.home.SelectBaseActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.common.api.ApiException
 import com.google.android.material.snackbar.Snackbar
@@ -35,7 +35,8 @@ class LoginActivity : AppCompatActivity() {
             })
 
             googleLoginSuccess.observe(this@LoginActivity, Observer {
-                Toast.makeText(this@LoginActivity, "Login Successful", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this@LoginActivity, SelectBaseActivity::class.java))
+                finish()
             })
         }
     }

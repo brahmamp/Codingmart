@@ -4,7 +4,6 @@ import com.codingmart.currencycompare.google.FirebaseHelper
 import com.codingmart.currencycompare.google.GoogleSignInHelper
 import com.codingmart.currencycompare.home.MainActivityViewModel
 import com.codingmart.currencycompare.login.LoginViewModel
-import com.codingmart.currencycompare.home.SelectBaseViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -20,12 +19,10 @@ val myModule =
         }
 
         viewModel {
-            MainActivityViewModel(apiService = get(), databaseService = get())
+            MainActivityViewModel(apiService = get(), exchangeRateDao = get())
         }
 
         viewModel {
             LoginViewModel(firebaseHelper = get())
         }
-
-        viewModel { SelectBaseViewModel(apiService = get(), databaseService = get()) }
     }

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#005C99">
+
+    <ImageView
+        android:id="@+id/codingmart_logo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/codingmart_logo"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/currency_compare_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android Interview - currency compare"
+        android:layout_marginTop="16dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codingmart_logo"/>
+
+    <TextView
+        android:id="@+id/refresh_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresh"
+        android:drawableLeft="@drawable/ic_refresh"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_compare_text"/>
+
+
+    <TextView
+        android:id="@+id/base_currency_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/base_currency_value"
+        android:textSize="18sp"
+        android:layout_marginTop="32dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/edit_base_currency"
+        app:layout_constraintTop_toBottomOf="@+id/refresh_button"/>
+
+    <TextView
+        android:id="@+id/edit_base_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit base currency"
+        android:textSize="18sp"
+        android:layout_marginTop="32dp"
+        android:textColor="#AAFFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/base_currency_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/refresh_button"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/base_currency_text"
+        android:background="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/todays_value_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today's Value"
+        android:textSize="18sp"
+        android:layout_marginTop="32dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/edit_base_currency"
+        app:layout_constraintTop_toBottomOf="@+id/divider"/>
+
+    <TextView
+        android:id="@+id/add_more_currency_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ Add more currency"
+        android:textSize="18sp"
+        android:layout_marginTop="32dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/todays_value_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/currencies_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todays_value_text"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

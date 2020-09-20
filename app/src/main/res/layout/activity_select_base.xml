@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/headText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -31,23 +32,24 @@
         android:id="@+id/selectBase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="16dp"
         android:text="@string/select_your_base"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/headText" />
 
     <AutoCompleteTextView
         android:id="@+id/edtCurrencyCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:background="@color/colorAccent"
+        android:background="@color/white"
         android:hint="@string/currency_code_inr_usd_eur"
         android:padding="10dp"
+        android:maxLines="1"
         app:layout_constraintTop_toBottomOf="@+id/selectBase" />
 
     <Button
@@ -60,7 +62,7 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:background="@color/colorPrimary"
         android:text="@string/next"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/white"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintTop_toBottomOf="@+id/edtCurrencyCode" />
 

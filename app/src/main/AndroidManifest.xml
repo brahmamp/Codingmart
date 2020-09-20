@@ -20,6 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".home.SelectBaseActivity" />
+        <activity android:name=".home.MainActivity" />
+        <activity android:name=".currencies.CurrenciesActivity" />
     </application>
 
 </manifest>

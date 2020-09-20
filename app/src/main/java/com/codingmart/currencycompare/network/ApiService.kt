@@ -9,8 +9,8 @@ interface ApiService {
 
     @GET("latest")
     fun getExchangeRateApi(
-        @Query("base") base: String = "USD",
-        @Query("symbols") symbols: String = "USD,GBP,INR,RUB,CNY,JPY,EUR,CAD"
+        @Query("base") base: String,
+        @Query("symbols") symbols: String
     ): Observable<ExchangeApiRateResponse>
 
 }
