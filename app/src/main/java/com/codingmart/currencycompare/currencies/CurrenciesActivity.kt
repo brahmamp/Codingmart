@@ -62,11 +62,11 @@ class CurrenciesActivity: AppCompatActivity() {
         viewModel.apply {
             errorResponse.observe(this@CurrenciesActivity, Observer {
                 it
-                loadingIndicator.visibility = View.VISIBLE
+                loadingIndicator.visibility = View.GONE
             })
 
             exchangeApiMap.observe(this@CurrenciesActivity, Observer {
-                loadingIndicator.visibility = View.VISIBLE
+                loadingIndicator.visibility = View.GONE
                 insertRecord(ExchangeRateEntity(0, getBaseCurrency(), selectedCurrency!!, it.getValue(selectedCurrency!!).toString()))
                 Toast.makeText(this@CurrenciesActivity, "$selectedCurrency added successfully", Toast.LENGTH_SHORT).show()
             })
